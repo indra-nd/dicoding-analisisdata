@@ -12,3 +12,5 @@ pip install numpy pandas matplotlib jupyter streamlit
 cd dashboard
 streamlit run main.py
 ```
+
+[Dashboard Analisis](https://indra-dashboard-data-dicoding.streamlit.app/)
