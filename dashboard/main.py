@@ -24,7 +24,7 @@ with st.sidebar:
 )
 
 #menginput data
-df = pd.read_csv('dashboard/hour.csv')
+df = pd.read_csv("dashboard/hour.csv")
 
 weekday = df['weekday'].sum()
 weekday
@@ -34,9 +34,10 @@ day =('Holiday', 'Weekday', 'Workingday')
 peminjam = (holiday, weekday, workingday)
 
 fig = plt.figure()
-plt.bar(x=day, height=peminjam)
+cl = ['gray','blue','gray']
 plt.title('Peminjam Sepeda ketika Holiday, Weekday, dan Workingday\n')
 plt.ylabel('Banyak Sepeda')
+plt.bar(x=day,height=peminjam,color=cl)
 
 st.pyplot(fig)
 
@@ -68,13 +69,14 @@ hour_nine = df[df['hr'] == 9]['weekday'].sum()
 
 hour_ten = df[df['hr'] == 10]['weekday'].sum()
 
-hour= (1,2,3,4,5,6,7,8,9,10)
+hour= ('1','2','3','4','5','6','7','8','9','10')
 banyak = (hour_one,hour_two,hour_three,hour_four,hour_five,hour_six,hour_seven,hour_eight,hour_nine,hour_ten)
 
 figg = plt.figure()
-plt.bar(x=hour, height=banyak)
+clr = ['gray','gray','gray','gray','blue','gray','gray','gray','gray','gray' ]
 plt.title('Banyaknya Sepeda yang dipinjam mulai 1 jam sampai 10 jam\n')
 plt.xlabel('Jam')
 plt.ylabel('Banyak Sepeda')
+plt.bar(x=hour, height=banyak,color=clr)
 
 st.pyplot(figg)
