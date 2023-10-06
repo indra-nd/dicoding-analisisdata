@@ -24,7 +24,7 @@ with st.sidebar:
 )
 
 #menginput data
-df = pd.read_csv('hour.csv')
+df = pd.read_csv('dashboard/hour.csv')
 
 weekday = df['weekday'].sum()
 weekday
