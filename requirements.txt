@@ -2,5 +2,3 @@ numpy
 pandas
 streamlit
 matplotlib
-pyplot
-jupyter
